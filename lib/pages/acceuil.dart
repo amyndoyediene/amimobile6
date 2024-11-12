@@ -1,4 +1,5 @@
 import 'package:amimobile6/pages/home.dart';
+import 'package:amimobile6/pages/home1.dart';
 import 'package:amimobile6/pages/urgence.dart';
 import 'package:amimobile6/pages/livrer.dart';
 import 'package:amimobile6/pages/note.dart';
@@ -23,10 +24,11 @@ class HoPage extends StatefulWidget {
 class _HomePageState extends State<HoPage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    homPage(),
+    Ho1Page(),
     livPage(),
-    urgPage(),
-    notePage(),
+    AvisPage(),
+    EmergencyPage(),
+    
   ];
 
   @override
@@ -40,6 +42,7 @@ class _HomePageState extends State<HoPage> {
         ),
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black), // Icônes en noir
+         automaticallyImplyLeading: false, // Désactive le bouton de retour
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

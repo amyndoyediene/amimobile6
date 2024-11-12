@@ -1,3 +1,4 @@
+import 'package:amimobile6/pages/connecter.dart';
 import 'package:flutter/material.dart';
 
 class livPage extends StatelessWidget {
@@ -7,21 +8,24 @@ class livPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/sene.png', height: 200),
+          Image.asset('assets/cond.png', height: 200),
           SizedBox(height: 20),
           Text(
-            "Problem Solving",
+            "Livreur & Conducteur",
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "page de connexion des conducteurs et livreur",
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 20),
           ElevatedButton(
-            onPressed: () {},
-            child: Text("Get started!"),
+            onPressed: () {Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );},
+            child: Text("C'est partie"),
           ),
         ],
       ),

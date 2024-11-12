@@ -1,4 +1,17 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.yourapp">
+
+    <!-- Autres permissions et configurations -->
+
+    <!-- Permissions de localisation -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Optionnel : Pour un accès continu à la localisation en arrière-plan -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Configuration de votre application -->
+
+
     <application
         android:label="amimobile6"
         android:name="${applicationName}"

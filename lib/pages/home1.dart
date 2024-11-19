@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:amimobile6/pages/info_user.dart';
-import 'package:amimobile6/pages/livraisonpage.dart';
-import 'package:amimobile6/pages/trajet.dart';
+import 'package:amimobile6/pages/mo_taxi_voi.dart';
+import 'package:amimobile6/pages/epiceri.dart';
+import 'package:amimobile6/pages/pharmacie.dart';
+import 'package:amimobile6/pages/restaurant.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -55,26 +57,41 @@ class _HoPageState extends State<Ho1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Désactive le bout
-        title: Text('Bienvenue, Ami'),
-        elevation: 0,
-        actions: [
-          Text(
-            'Almadies, Dakar, Dakar, Senegal',
-            style: TextStyle(fontSize: 16),
-          ),
-          SizedBox(width: 48),
-          IconButton(
-            icon:
-                Icon(Icons.admin_panel_settings_outlined, color: Colors.black),
-            onPressed: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ProfilePage()),
-                    );},
-            //ProfilePage
-          ),
-        ],
+  automaticallyImplyLeading: false, // Désactive le bouton de retour automatique
+  title: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        'Bienvenue, Ami',
+        style: TextStyle(fontSize: 20),
       ),
+      Text(
+          'Almadies, Dakar, Dakar, Senegal',
+        // Texte ajouté
+        style: TextStyle(fontSize: 16, color: Colors.grey),
+      ),
+    ],
+  ),
+  elevation: 0,
+  actions: [
+    Padding(
+      padding: const EdgeInsets.only(right: 16.0),
+      child: Center(
+        
+      ),
+    ),
+    IconButton(
+      icon: Icon(Icons.admin_panel_settings_outlined, color: Colors.black),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ProfilePage()),
+        );
+      },
+    ),
+  ],
+),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -83,7 +100,7 @@ class _HoPageState extends State<Ho1Page> {
             ),
             Container(
               height: 200,
-              width: 900,
+               width: double.infinity, // Utiliser la largeur de l'écran
               child: PageView(
                 controller: _pageController,
                 children: [
@@ -93,7 +110,7 @@ class _HoPageState extends State<Ho1Page> {
                 ],
               ),
             ),
-            SizedBox(height: 100),
+            SizedBox(height: 50),
             Text(
               'Decouvrez toutes nos offres',
               style: TextStyle(
@@ -101,9 +118,9 @@ class _HoPageState extends State<Ho1Page> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 70),
+            SizedBox(height: 50),
             _buildNewInStockSection(),
-            SizedBox(height: 70),
+            SizedBox(height: 50),
             _buildLivrerSection(),
           ],
         ),
@@ -238,7 +255,7 @@ class _HoPageState extends State<Ho1Page> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => restoPage()),
+                      MaterialPageRoute(builder: (context) => CresoPage()),
                     );
                   },
                   child: Column(

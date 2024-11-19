@@ -51,25 +51,16 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildSectionTitle('Explorer'),
-            _buildOptionCard([
-              _buildOptionTile(context, 'Promotions', Icons.credit_card),
-              _buildOptionTile(context, 'Favoris', Icons.star),
-            ]),
-            SizedBox(height: 16),
             _buildSectionTitle('Mon compte'),
             _buildOptionCard([
               _buildOptionTile(
-                  context, 'Informations personnelles', Icons.person),
-              _buildOptionTile(context, 'Modes de paiement', Icons.credit_card),
-              _buildOptionTile(context, 'Activité', Icons.history),
-              _buildOptionTile(context, 'Vos adresses', Icons.location_on),
-            ]),
-            SizedBox(height: 16),
-            _buildSectionTitle('Plus d\'actions'),
-            _buildOptionCard([
-              _buildOptionTile(context, 'Support', Icons.chat),
-              _buildOptionTile(context, 'Yassir Business', Icons.business),
+                  context, 'Informations personnelles', Icons.person, PersonalInfoPage()),
+              _buildOptionTile(
+                  context, 'Modes de paiement', Icons.credit_card, PaymentMethodsPage()),
+              _buildOptionTile(context, 'Support', Icons.chat, SupportPage()),
+              _buildOptionTile(context, 'Urban Move', Icons.business, YassirBusinessPage()),
+              _buildOptionTile(context, 'Promotions', Icons.credit_card, PromotionsPage()),
+              _buildOptionTile(context, 'Se déconnecter', Icons.star, LogoutPage()),
             ]),
           ],
         ),
@@ -103,7 +94,8 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildOptionTile(BuildContext context, String title, IconData icon) {
+  Widget _buildOptionTile(
+      BuildContext context, String title, IconData icon, Widget page) {
     return ListTile(
       leading: Icon(icon, color: Colors.deepPurple),
       title: Text(
@@ -112,8 +104,97 @@ class ProfilePage extends StatelessWidget {
       ),
       trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
       onTap: () {
-        // Ajouter une navigation vers une page spécifique si besoin
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
       },
+    );
+  }
+}
+
+// Création des pages spécifiques
+
+class PersonalInfoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Informations personnelles'),
+      ),
+      body: Center(
+        child: Text('Page Informations personnelles'),
+      ),
+    );
+  }
+}
+
+class PaymentMethodsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Modes de paiement'),
+      ),
+      body: Center(
+        child: Text('Page Modes de paiement'),
+      ),
+    );
+  }
+}
+
+class SupportPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Support'),
+      ),
+      body: Center(
+        child: Text('Page Support'),
+      ),
+    );
+  }
+}
+
+class YassirBusinessPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Urban Move'),
+      ),
+      body: Center(
+        child: Text('Page Yassir Business'),
+      ),
+    );
+  }
+}
+
+class PromotionsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Promotions'),
+      ),
+      body: Center(
+        child: Text('Page Promotions'),
+      ),
+    );
+  }
+}
+
+class LogoutPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Se déconnecter'),
+      ),
+      body: Center(
+        child: Text('Page Se déconnecter'),
+      ),
     );
   }
 }

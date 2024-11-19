@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class pharmaPage extends StatelessWidget {
+class TaxiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,8 +9,8 @@ class pharmaPage extends StatelessWidget {
     );
   }
 }
-
-class restoPage extends StatelessWidget {
+///////////////////////////////////////////////////////////////////////////////////////////
+class VoiturePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +19,8 @@ class restoPage extends StatelessWidget {
     );
   }
 }
-
-class epiPage extends StatelessWidget {
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class MotoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

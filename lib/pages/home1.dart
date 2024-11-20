@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:amimobile6/pages/info_user.dart';
+import 'package:amimobile6/pages/reservation.dart';
 import 'package:amimobile6/pages/mo_taxi_voi.dart';
 import 'package:amimobile6/pages/epiceri.dart';
 import 'package:amimobile6/pages/pharmacie.dart';
@@ -57,41 +58,40 @@ class _HoPageState extends State<Ho1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-  automaticallyImplyLeading: false, // Désactive le bouton de retour automatique
-  title: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        'Bienvenue, Ami',
-        style: TextStyle(fontSize: 20),
+        automaticallyImplyLeading:
+            false, // Désactive le bouton de retour automatique
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Bienvenue, Ami',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Almadies, Dakar, Dakar, Senegal',
+              // Texte ajouté
+              style: TextStyle(fontSize: 16, color: Colors.grey),
+            ),
+          ],
+        ),
+        elevation: 0,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: Center(),
+          ),
+          IconButton(
+            icon:
+                Icon(Icons.admin_panel_settings_outlined, color: Colors.black),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+          ),
+        ],
       ),
-      Text(
-          'Almadies, Dakar, Dakar, Senegal',
-        // Texte ajouté
-        style: TextStyle(fontSize: 16, color: Colors.grey),
-      ),
-    ],
-  ),
-  elevation: 0,
-  actions: [
-    Padding(
-      padding: const EdgeInsets.only(right: 16.0),
-      child: Center(
-        
-      ),
-    ),
-    IconButton(
-      icon: Icon(Icons.admin_panel_settings_outlined, color: Colors.black),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ProfilePage()),
-        );
-      },
-    ),
-  ],
-),
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -100,7 +100,7 @@ class _HoPageState extends State<Ho1Page> {
             ),
             Container(
               height: 200,
-               width: double.infinity, // Utiliser la largeur de l'écran
+              width: double.infinity, // Utiliser la largeur de l'écran
               child: PageView(
                 controller: _pageController,
                 children: [
@@ -153,7 +153,8 @@ class _HoPageState extends State<Ho1Page> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TaxiPage()),
+                      MaterialPageRoute(
+                          builder: (context) => ReservationPage()),
                     );
                   },
                   child: Column(

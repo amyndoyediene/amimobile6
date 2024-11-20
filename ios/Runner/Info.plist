@@ -10,6 +10,11 @@
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Nous avons besoin de votre position pour réserver un taxi.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Nous avons besoin de votre position pour réserver un taxi.</string>
+
 	<key>CFBundleDisplayName</key>
 	<string>Amimobile6</string>
 	<key>CFBundleExecutable</key>

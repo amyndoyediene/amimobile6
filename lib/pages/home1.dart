@@ -173,30 +173,30 @@ class _HoPageState extends State<Ho1Page> {
                 ),
               ),
               SizedBox(width: 10),
-              Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => VoiturePage()),
-                    );
-                  },
-                  child: Column(
-                    children: [
-                      Image.asset('assets/voit.png', fit: BoxFit.cover),
-                      SizedBox(height: 5),
-                      Text(
-                        'Voiture',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   child: GestureDetector(
+              //     onTap: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(builder: (context) => VoiturePage()),
+              //       );
+              //     },
+              //     child: Column(
+              //       children: [
+              //         Image.asset('assets/voit.png', fit: BoxFit.cover),
+              //         SizedBox(height: 5),
+              //         Text(
+              //           'Voiture',
+              //           style: TextStyle(
+              //             fontSize: 14,
+              //             fontWeight: FontWeight.bold,
+              //             color: Colors.black,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               SizedBox(width: 10),
               Expanded(
                 child: GestureDetector(

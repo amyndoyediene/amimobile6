@@ -1,3 +1,4 @@
+import 'package:amimobile6/pages/pharma_detail.dart';
 import 'package:flutter/material.dart';
 
 class pharmaPage extends StatelessWidget {
@@ -36,16 +37,29 @@ class pharmaPage extends StatelessWidget {
   }
 }
 
+
+
 class PharmacyDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.network(
-          'assets/pharma.png', // Remplace par ton image réelle
-          height: 200,
-          width: double.infinity,
-          fit: BoxFit.cover,
+        GestureDetector(
+          onTap: () {
+            // Navigation vers une nouvelle page
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PharmacyImagePage(),
+              ),
+            );
+          },
+          child: Image.network(
+            'assets/pharma.png', // Remplace par ton image réelle
+            height: 200,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         ),
         Positioned(
           top: 10,
@@ -73,10 +87,10 @@ class PharmacyDetails extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Pharmacie De La Creule',
+                  'Pharmacie Mame Ndiare',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                const Text('300 rue notre dame\n59190 HAZEBROUCK'),
+                const Text('YOFF rue tafsir dieye\n677'),
                 const SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +105,7 @@ class PharmacyDetails extends StatelessWidget {
                     ElevatedButton.icon(
                       onPressed: () {}, // Ajoute l'action pour appeler
                       icon: const Icon(Icons.phone),
-                      label: const Text('0328418760'),
+                      label: const Text('776564324'),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black),
                     ),
@@ -105,6 +119,10 @@ class PharmacyDetails extends StatelessWidget {
     );
   }
 }
+///ghhhh
+
+
+/////ahjj
 
 class SearchBar extends StatelessWidget {
   @override
@@ -152,14 +170,14 @@ class PromotionsSection extends StatelessWidget {
             children: [
               PromotionCard(
                 discount: '-20%',
-                image: 'assets/tacos.png',
+                image: 'assets/pharma.png',
                 name: 'Parodontax de...',
-                oldPrice: '9.99 €',
-                newPrice: '7.99 €',
+                oldPrice: '9.99 ',
+                newPrice: '7.99 ',
               ),
               PromotionCard(
                 discount: '-25%',
-                image: 'assets/pharma',
+                image: 'assets/pharma.png',
                 name: 'COMPEED® Pa...',
                 oldPrice: '8.99 €',
                 newPrice: '6.99 €',
@@ -248,11 +266,17 @@ class PromotionCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.shopping_cart),
-                    label: const Text('Ajouter au panier'),
-                  ),
+                  ElevatedButton(
+  onPressed: () {
+    // Ajoute l'action ici
+  },
+  style: ElevatedButton.styleFrom(
+    shape: const CircleBorder(), // Optionnel : rend le bouton circulaire
+    padding: const EdgeInsets.all(10), // Ajuste l'espacement
+  ),
+  child: const Icon(Icons.add),
+),
+
                 ],
               ),
             ),
@@ -262,6 +286,7 @@ class PromotionCard extends StatelessWidget {
     );
   }
 }
+//
 
 class BrandsSection extends StatelessWidget {
   @override
@@ -270,8 +295,7 @@ class BrandsSection extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Container(
         decoration: BoxDecoration(
-          color:  Color(0xFF00FF00), // Ver
-          
+          color: const Color(0xFF00FF00), // Couleur de fond verte
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
@@ -291,23 +315,22 @@ class BrandsSection extends StatelessWidget {
 
               // Images sous le titre
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   // Première image
                   Expanded(
                     child: Image.network(
-                      'assets/pharma.png', // Remplace par l'URL ou une image locale
-                      height: 80,
-                      fit: BoxFit.contain,
+                      'assets/pharma.png', // Remplace par ton chemin d'image
+                      height: 100, // Ajuste la hauteur
+                      fit: BoxFit.contain, // Affiche l'image entière sans la recadrer
                     ),
                   ),
                   const SizedBox(width: 16),
                   // Deuxième image
                   Expanded(
                     child: Image.network(
-                      'assets/pharma.png', // Remplace par l'URL ou une image locale
-                      height: 80,
-                      fit: BoxFit.contain,
+                      'assets/pharma.png', // Remplace par ton chemin d'image
+                      height: 100, // Ajuste la hauteur
+                      fit: BoxFit.contain, // Affiche l'image entière sans la recadrer
                     ),
                   ),
                 ],

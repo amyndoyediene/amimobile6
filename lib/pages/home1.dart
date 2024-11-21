@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:amimobile6/pages/info_user.dart';
-import 'package:amimobile6/pages/reservation.dart';
-import 'package:amimobile6/pages/mo_taxi_voi.dart';
+import 'package:amimobile6/pages/reservation_voiture.dart';
+import 'package:amimobile6/pages/reservation_moto.dart';
 import 'package:amimobile6/pages/epiceri.dart';
 import 'package:amimobile6/pages/pharmacie.dart';
 import 'package:amimobile6/pages/restaurant.dart';
@@ -204,7 +204,7 @@ class _HoPageState extends State<Ho1Page> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MotoPage()),
+                      MaterialPageRoute(builder: (context) => LivraisonPage()),
                     );
                   },
                   child: Column(

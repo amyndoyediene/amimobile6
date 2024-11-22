@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:amimobile6/pages/home.dart';
 import 'package:amimobile6/pages/home1.dart';
 import 'package:amimobile6/pages/urgence.dart';
 import 'package:amimobile6/pages/livrer.dart';
 import 'package:amimobile6/pages/note.dart';
-import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,50 +28,46 @@ class _HomePageState extends State<HoPage> {
     livPage(),
     AvisPage(),
     EmergencyPage(),
-    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white, // Fond en blanc
+        backgroundColor: Colors.white,
         title: Text(
           "UrbanMove",
-          style: TextStyle(color: Colors.black), // Titre en noir
+          style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.black), // Icônes en noir
-         automaticallyImplyLeading: false, // Désactive le bouton de retour
+        iconTheme: IconThemeData(color: Colors.black),
+        automaticallyImplyLeading: false,
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.black, // Icônes sélectionnées en noir
-        unselectedItemColor: Colors.black54, // Icônes non sélectionnées en gris
+        selectedItemColor: Colors.green, // Couleur des icônes sélectionnées en vert
+        unselectedItemColor: Colors.green.shade300, // Couleur des icônes non sélectionnées en vert clair
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
         items: [
-         
           BottomNavigationBarItem(
-            icon: Icon(Icons.home), // Exemple pour Accueil
+            icon: Icon(Icons.home),
             label: 'Accueil',
           ),
-          
           BottomNavigationBarItem(
-            icon: Icon(Icons.delivery_dining), // Exemple pour Livreur
+            icon: Icon(Icons.delivery_dining),
             label: 'Livreur',
-          
           ),
-           BottomNavigationBarItem(
-            icon: Icon(Icons.star), // Exemple pour Avis et Note
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
             label: 'Avis et Note',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.warning), // Exemple pour Urgence
+            icon: Icon(Icons.warning),
             label: 'Urgence',
           ),
         ],

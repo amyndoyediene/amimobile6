@@ -1,4 +1,7 @@
+import 'package:amimobile6/pages/admin/admin.dart';
+import 'package:amimobile6/pages/inscrire.dart';
 import 'package:amimobile6/pages/acceuil.dart';
+import 'package:amimobile6/pages/motdepasseoubli.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -7,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SiPage(),
+      home: LoginPage(),
     );
   }
 }
 
-class SiPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +27,7 @@ class SiPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             // Action de retour
-              Navigator.pop(context); // Action de retour
-            
+            Navigator.pop(context); // Action de retour
           },
         ),
         actions: [
@@ -33,6 +35,11 @@ class SiPage extends StatelessWidget {
             icon: Icon(Icons.admin_panel_settings, color: Colors.black),
             onPressed: () {
               // Action pour l'icône "admin"
+              Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AdminDashboard()),
+                    );
+              
             },
           ),
         ],
@@ -53,7 +60,7 @@ class SiPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.red, // Couleur du titre en rouge
+                color: Colors.green, // Couleur du titre en rouge
               ),
             ),
             SizedBox(height: 30),
@@ -94,10 +101,15 @@ class SiPage extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // Action "Mot de passe oublié ?"
+                    
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  MotDePasseOubliePage()),
+                    );
                   },
                   child: Text(
                     'Mot de passe oublié ?',
-                    style: TextStyle(color: Colors.red),
+                    style: TextStyle(color: Colors.green),
                   ),
                 ),
               ],
@@ -113,21 +125,36 @@ class SiPage extends StatelessWidget {
 
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red, // Couleur du bouton
+                backgroundColor: Colors.green, // Couleur du bouton
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
               ),
               child: Text(
-                'Sinscrire',
+                'Me Connecter',
                 style: TextStyle(fontSize: 16),
               ),
             ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              
+              children: [
+                Text("Pas encore de compte ?"),
+                TextButton(
+                  onPressed: () {
+                    // Action "Créer un compte"
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SiPage()),
+                    );
+                  },
+                  child: Text(
+                    'Créez-en un !',
+                    style: TextStyle(color: Colors.green),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

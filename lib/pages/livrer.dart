@@ -1,4 +1,5 @@
-import 'package:amimobile6/pages/connecter.dart';
+import 'package:amimobile6/pages/connexi.dart';
+import 'package:amimobile6/pages/livreur/menu.dart';
 import 'package:flutter/material.dart';
 
 class livPage extends StatelessWidget {
@@ -23,7 +24,7 @@ class livPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => MenuPrincipal()),
                     );},
             child: Text("C'est partie"),
           ),

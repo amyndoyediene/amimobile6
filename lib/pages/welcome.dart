@@ -1,4 +1,4 @@
-import 'package:amimobile6/pages/connecter.dart';
+import 'package:amimobile6/pages/connexi.dart';
 import 'package:amimobile6/pages/acceuil.dart';
 import 'package:flutter/material.dart';
 

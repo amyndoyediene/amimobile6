@@ -104,7 +104,7 @@ class _HoPageState extends State<Ho1Page> {
               child: PageView(
                 controller: _pageController,
                 children: [
-                  Image.asset('assets/com.png', fit: BoxFit.contain),
+                  Image.asset('assets/com.png', fit: BoxFit.cover),
                   Image.asset('assets/comm.png', fit: BoxFit.contain),
                   Image.asset('assets/commm.png', fit: BoxFit.contain),
                 ],

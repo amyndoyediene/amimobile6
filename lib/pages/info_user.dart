@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Profil',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.green,
       ),
       home: ProfilePage(),
     );
@@ -39,7 +39,7 @@ class ProfilePage extends StatelessWidget {
         actions: [
           CircleAvatar(
             child: Text('A'),
-            backgroundColor: Colors.deepPurple[100],
+            backgroundColor: Colors.green[100],
           ),
           SizedBox(width: 16),
         ],
@@ -97,7 +97,7 @@ class ProfilePage extends StatelessWidget {
   Widget _buildOptionTile(
       BuildContext context, String title, IconData icon, Widget page) {
     return ListTile(
-      leading: Icon(icon, color: Colors.deepPurple),
+      leading: Icon(icon, color: Colors.green),
       title: Text(
         title,
         style: TextStyle(fontSize: 16, color: Colors.black),

@@ -22,12 +22,20 @@ class livPage extends StatelessWidget {
           ),
           SizedBox(height: 20),
           ElevatedButton(
-            onPressed: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MenuPrincipal()),
-                    );},
-            child: Text("C'est partie"),
-          ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MenuPrincipal()),
+    );
+  },
+  style: ElevatedButton.styleFrom(
+    foregroundColor: Colors.black, backgroundColor: Colors.green, // Couleur du texte
+    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12), // Optionnel : marges internes
+    textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold), // Optionnel : style du texte
+  ),
+  child: Text("C'est partie"),
+),
+
         ],
       ),
     );

@@ -82,7 +82,7 @@ class _HoPageState extends State<Ho1Page> {
           ),
           IconButton(
             icon:
-                Icon(Icons.admin_panel_settings_outlined, color: Colors.black),
+                Icon(Icons.admin_panel_settings_outlined, color: Colors.green),
             onPressed: () {
               Navigator.push(
                 context,
@@ -104,7 +104,7 @@ class _HoPageState extends State<Ho1Page> {
               child: PageView(
                 controller: _pageController,
                 children: [
-                  Image.asset('assets/com.png', fit: BoxFit.cover),
+                  Image.asset('assets/com.png', fit: BoxFit.contain),
                   Image.asset('assets/comm.png', fit: BoxFit.contain),
                   Image.asset('assets/commm.png', fit: BoxFit.contain),
                 ],

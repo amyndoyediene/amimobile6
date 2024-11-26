@@ -82,21 +82,21 @@ class _EaPageState extends State<epiPage> {
     products = [
       Product(
         name: 'Viande',
-        imagePath: 'assets/piza.png',
-        description: 'Des sacs de haute qualité',
+        imagePath: 'assets/viande.png',
+        description: 'Viande',
         price: 99.99,
         category: 'vp',
       ),
       Product(
         name: 'steack',
-        imagePath: 'assets/piza.png',
-        description: 'Une superbe voiture Toyota',
+        imagePath: 'assets/steack.png',
+        description: 'Steack',
         price: 19999.99,
         category: 'vp',
       ),
       Product(
         name: 'Banane',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/bana.png',
         description: 'Faite plasir a vos enfants',
         price: 99.99,
         category: 'fl',
@@ -104,7 +104,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Fruits de mer',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/fruitmer.png',
         description: 'Pour un teint lumineux',
         price: 19999.99,
         category: 'vp',
@@ -112,7 +112,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Saussicon',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/sauci.png',
         description: 'Des smart TV de derniere generation',
         price: 12.99,
         category: 'vp',
@@ -120,7 +120,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Pomme',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/pom.png',
         description: 'Des cremes solaire pour mieux respecter votre peau',
         price: 18.99,
         category: 'fl',
@@ -128,7 +128,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Carotte',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/carot.png',
         description: 'Un beau visage sans tache',
         price: 126.99,
         category: 'fl',
@@ -136,7 +136,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Patates',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/patate.png',
         description: 'Des iphone de dernière génération',
         price: 188.99,
         category: 'fl',
@@ -144,7 +144,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Poisson',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/poi.png',
         description: 'Des maquillage pour être plus belle',
         price: 19999.99,
         category: 'vp',
@@ -152,7 +152,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Poulet',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/poule.png',
         description: 'Rendez vos cheveux plus lisses',
         price: 19999.99,
         category: 'vp',
@@ -160,7 +160,7 @@ class _EaPageState extends State<epiPage> {
 
       Product(
         name: 'Citron',
-        imagePath: 'assets/piza.png',
+        imagePath: 'assets/citron.png',
         description: 'Parfum de luxe pour sentir bon tout le temps',
         price: 79.99,
         category: 'fl',

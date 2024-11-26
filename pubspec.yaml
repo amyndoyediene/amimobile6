@@ -85,6 +85,27 @@ flutter:
      - assets/poulet.png
      - assets/super.png
      - assets/superm.png
+     - assets/med1.png
+     - assets/med2.png
+     - assets/med3.png
+     - assets/med4.png
+     - assets/med5.png
+     - assets/med01.png
+     - assets/med02.png
+     - assets/bana.png
+     - assets/viande.png
+     - assets/steack.png
+     - assets/fruitmer.png
+     - assets/pom.png
+     - assets/patate.png
+     - assets/poi.png
+     - assets/citron.png
+     - assets/poule.png
+     - assets/carot.png
+     - assets/sauci.png
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

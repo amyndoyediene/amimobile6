@@ -319,7 +319,7 @@ class BrandsSection extends StatelessWidget {
                   // Première image
                   Expanded(
                     child: Image.network(
-                      'assets/pharma.png', // Remplace par ton chemin d'image
+                      'assets/med01.png', // Remplace par ton chemin d'image
                       height: 100, // Ajuste la hauteur
                       fit: BoxFit.contain, // Affiche l'image entière sans la recadrer
                     ),
@@ -328,7 +328,7 @@ class BrandsSection extends StatelessWidget {
                   // Deuxième image
                   Expanded(
                     child: Image.network(
-                      'assets/pharma.png', // Remplace par ton chemin d'image
+                      'assets/med02.png', // Remplace par ton chemin d'image
                       height: 100, // Ajuste la hauteur
                       fit: BoxFit.contain, // Affiche l'image entière sans la recadrer
                     ),

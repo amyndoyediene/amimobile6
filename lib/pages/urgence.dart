@@ -39,7 +39,7 @@ class _EmergencyPageState extends State<EmergencyPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false, // Désactive le bout
         title: Text("Bouton d'Urgence"),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
       ),
       body: Center(
         child: Column(
@@ -53,7 +53,7 @@ class _EmergencyPageState extends State<EmergencyPage> {
             SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.green,
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
               ),
               onPressed: _getCurrentLocation,
